@@ -52,6 +52,24 @@ body::after {
   }
 }
 
+@keyframes starsFast {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px;
+  }
+}
+
+@keyframes starsSlow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px -400px;
+  }
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -59,6 +77,38 @@ body::after {
   justify-content: space-between;
   gap: 6rem;
   z-index: 1;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.hero::before {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.5) 0 2px,
+    transparent 2px 40px
+  );
+  animation: starsFast 30s linear infinite;
+}
+
+.hero::after {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.3) 0 1px,
+    transparent 1px 25px
+  );
+  animation: starsSlow 60s linear infinite;
 }
 
 
@@ -151,7 +201,7 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 45vw;
+  max-width: 41vw;
 }
 
 #hero-title {
