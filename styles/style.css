@@ -6,9 +6,11 @@
 }
 
 body {
-  background-color: #e1f4cb;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(60deg, #e1f4cb, #90d6b6, #31493c);
+  background-size: 600% 600%;
+  animation: bgShift 15s ease infinite;
 }
 
 body::before,
@@ -52,6 +54,18 @@ body::after {
   }
 }
 
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -59,7 +73,7 @@ body::after {
   justify-content: space-between;
   gap: 6rem;
   z-index: 1;
-
+}
 
 .nav-bar {
   display: flex;
