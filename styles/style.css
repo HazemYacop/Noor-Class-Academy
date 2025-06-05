@@ -75,7 +75,6 @@ body::after {
   z-index: 1;
 }
 
-
 .nav-bar {
   display: flex;
   align-items: center;
@@ -165,7 +164,7 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 45vw;
+  max-width: 41vw;
 }
 
 #hero-title {
