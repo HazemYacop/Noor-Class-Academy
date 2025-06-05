@@ -7,19 +7,6 @@
 
 body {
   background-color: #e1f4cb;
-  background-image: url("../assets/islamic-pattern.svg");
-  background-repeat: repeat;
-  background-size: 200px;
-  animation: bgScroll 25s linear infinite;
-}
-
-@keyframes bgScroll {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 200px 200px;
-  }
 }
 
 @keyframes bgScroll {
@@ -46,10 +33,11 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 60%;
+  width: 55%;
   background-image: url("../assets/islamic-pattern.svg");
+  background-color: #41604f;
   background-repeat: repeat;
-  background-size: 200px;
+  background-size: 2rem;
   animation: bgScroll 25s linear infinite;
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
   opacity: 0.3;
@@ -146,7 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 45vw;
+  max-width: 41vw;
 }
 
 #hero-title {
