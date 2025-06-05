@@ -9,12 +9,21 @@ body {
   background-color: #e1f4cb;
 }
 
-@keyframes bgScroll {
+@keyframes starsFast {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: 200px 200px;
+    background-position: 400px 400px;
+  }
+}
+
+@keyframes starsSlow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px -400px;
   }
 }
 
@@ -27,22 +36,36 @@ body {
   z-index: 1;
 }
 
+.hero::before,
 .hero::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 55%;
-  background-image: url("../assets/islamic-pattern.svg");
-  background-color: #41604f;
-  background-repeat: repeat;
-  background-size: 2rem;
-  animation: bgScroll 25s linear infinite;
+  width: 60%;
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-  opacity: 0.3;
   pointer-events: none;
   z-index: -1;
+  opacity: 0.25;
+}
+
+.hero::before {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.5) 0 2px,
+    transparent 2px 40px
+  );
+  animation: starsFast 30s linear infinite;
+}
+
+.hero::after {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.3) 0 1px,
+    transparent 1px 25px
+  );
+  animation: starsSlow 60s linear infinite;
 }
 
 .nav-bar {
