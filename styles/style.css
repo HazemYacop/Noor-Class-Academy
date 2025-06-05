@@ -9,7 +9,6 @@ body {
   background-color: #e1f4cb;
 }
 
-
 @keyframes starsFast {
   from {
     background-position: 0 0;
@@ -158,7 +157,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 45vw;
+  max-width: 41vw;
 }
 
 #hero-title {
