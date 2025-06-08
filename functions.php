@@ -3,7 +3,9 @@ function noor_class_theme_scripts() {
     wp_enqueue_style( 'noor-main-style', get_template_directory_uri() . '/styles/style.css', array(), '1.0' );
     wp_enqueue_style( 'noor-bg-style', get_template_directory_uri() . '/styles/bg.css', array(), '1.0' );
 
-    if ( is_page() ) {
+    if ( is_page_template( 'page-all-posts.php' ) ) {
+        wp_enqueue_style( 'noor-all-posts-style', get_template_directory_uri() . '/styles/all-posts.css', array( 'noor-main-style' ), '1.0' );
+    } elseif ( is_page() ) {
         wp_enqueue_style( 'noor-page-style', get_template_directory_uri() . '/styles/page.css', array( 'noor-main-style' ), '1.0' );
     }
 
@@ -160,6 +162,17 @@ function noor_set_posts_per_page( $query ) {
 }
 add_action( 'pre_get_posts', 'noor_set_posts_per_page' );
 
+function noor_register_contact_cpt() {
+    $args = array(
+        'public'       => false,
+        'show_ui'      => true,
+        'label'        => __( 'Contact Messages', 'noor-class' ),
+        'supports'     => array( 'title', 'editor' ),
+    );
+    register_post_type( 'contact_message', $args );
+}
+add_action( 'init', 'noor_register_contact_cpt' );
+
 function noor_handle_contact_form() {
     $phone   = isset( $_POST['contact_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_phone'] ) ) : '';
     $message = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['contact_message'] ) ) : '';
@@ -169,6 +182,16 @@ function noor_handle_contact_form() {
     $body        = "Phone: $phone\n\n$message";
 
     wp_mail( $admin_email, $subject, $body );
+    $post_id = wp_insert_post( array(
+        'post_type'   => 'contact_message',
+        'post_title'  => $phone,
+        'post_content'=> $message,
+        'post_status' => 'private'
+    ) );
+
+    if ( $post_id ) {
+        update_post_meta( $post_id, 'contact_phone', $phone );
+    }
 
     wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url() );
     exit;
