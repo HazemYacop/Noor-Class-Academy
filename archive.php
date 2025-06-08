@@ -5,9 +5,9 @@
         </div>
       </div>
     </section>
-    <section class="all-posts">
-      <div class="post-container">
-        <div class="posts">
+      <section class="all-posts">
+        <div class="post-container">
+          <div class="posts">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <a href="<?php the_permalink(); ?>">
               <div class="post-card">
@@ -29,5 +29,6 @@
           <?php the_posts_pagination(); ?>
         </div>
       </div>
+      <?php get_sidebar(); ?>
     </section>
 <?php get_footer(); ?>
