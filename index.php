@@ -280,14 +280,22 @@
   <section class="blogs">
     <h2 id="blogs-intro-title">Explore Our Blogs</h2>
     <div class="blogs-cards">
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php
+        $home_query = new WP_Query( array( 'posts_per_page' => 3 ) );
+        if ( $home_query->have_posts() ) :
+          while ( $home_query->have_posts() ) : $home_query->the_post();
+      ?>
         <a href="<?php the_permalink(); ?>">
           <div class="blog-card">
             <h3 class="blog-title"><?php the_title(); ?></h3>
             <p class="blog-description"><?php echo get_the_excerpt(); ?></p>
           </div>
         </a>
-      <?php endwhile; else : ?>
+      <?php
+          endwhile;
+          wp_reset_postdata();
+        else :
+      ?>
         <p><?php esc_html_e( 'No posts found.', 'noor-class' ); ?></p>
       <?php endif; ?>
     </div>
