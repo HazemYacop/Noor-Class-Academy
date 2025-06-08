@@ -152,4 +152,27 @@ function noor_register_custom_widgets() {
     register_widget( 'Noor_Latest_Widget' );
 }
 add_action( 'widgets_init', 'noor_register_custom_widgets' );
+
+function noor_set_posts_per_page( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && ( $query->is_home() || $query->is_archive() ) ) {
+        $query->set( 'posts_per_page', 6 );
+    }
+}
+add_action( 'pre_get_posts', 'noor_set_posts_per_page' );
+
+function noor_handle_contact_form() {
+    $phone   = isset( $_POST['contact_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_phone'] ) ) : '';
+    $message = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['contact_message'] ) ) : '';
+
+    $admin_email = get_option( 'admin_email' );
+    $subject     = __( 'New Contact Message', 'noor-class' );
+    $body        = "Phone: $phone\n\n$message";
+
+    wp_mail( $admin_email, $subject, $body );
+
+    wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url() );
+    exit;
+}
+add_action( 'admin_post_nopriv_noor_contact_form', 'noor_handle_contact_form' );
+add_action( 'admin_post_noor_contact_form', 'noor_handle_contact_form' );
 ?>
