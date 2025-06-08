@@ -315,34 +315,38 @@
             Whatsapp: +20 1102401767
           </p>
           <ul id="contact-channels">
-            <a href="#"
-              ><li class="contact-channel">
+            <li class="contact-channel">
+              <a href="#">
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/assets/facebook-icon.png"
                   alt="Learn Quran Online"
-                /></li
-            ></a>
-            <a href="#"
-              ><li class="contact-channel">
+                />
+              </a>
+            </li>
+            <li class="contact-channel">
+              <a href="#">
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/assets/whatsapp-icon.png"
                   alt="Learn Quran Online"
-                /></li
-            ></a>
-            <a href="#"
-              ><li class="contact-channel">
+                />
+              </a>
+            </li>
+            <li class="contact-channel">
+              <a href="#">
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/assets/telegram-icon.png"
                   alt="Learn Quran Online"
-                /></li
-            ></a>
-            <a href="#"
-              ><li class="contact-channel">
+                />
+              </a>
+            </li>
+            <li class="contact-channel">
+              <a href="#">
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/assets/twitter-icon.png"
                   alt="Learn Quran Online"
-                /></li
-            ></a>
+                />
+              </a>
+            </li>
           </ul>
         </div>
         <form action="#" id="contact-us-form">

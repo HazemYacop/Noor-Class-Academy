@@ -17,8 +17,12 @@
     <div class="footer-column">
       <h4 class="footer-column-title">Contact Us</h4>
       <ul class="footer-items">
-        <a href="mailto:noor.class.support@gmail.com"><li class="footer-item">noor.class.support@gmail.com</li></a>
-        <a href="tel:+201102401767"><li class="footer-item">+20 1102401767</li></a>
+        <li class="footer-item">
+          <a href="mailto:noor.class.support@gmail.com">noor.class.support@gmail.com</a>
+        </li>
+        <li class="footer-item">
+          <a href="tel:+201102401767">+20 1102401767</a>
+        </li>
       </ul>
     </div>
     <?php echo do_shortcode( '[newsletter_form]' ); ?>
