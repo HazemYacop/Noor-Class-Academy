@@ -23,7 +23,8 @@ add_action( 'wp_enqueue_scripts', 'noor_class_theme_scripts' );
 
 function noor_class_theme_setup() {
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
+    // Ensure featured images are available for posts and pages.
+    add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'noor-class' ),
@@ -162,17 +163,6 @@ function noor_set_posts_per_page( $query ) {
 }
 add_action( 'pre_get_posts', 'noor_set_posts_per_page' );
 
-function noor_register_contact_cpt() {
-    $args = array(
-        'public'       => false,
-        'show_ui'      => true,
-        'label'        => __( 'Contact Messages', 'noor-class' ),
-        'supports'     => array( 'title', 'editor' ),
-    );
-    register_post_type( 'contact_message', $args );
-}
-add_action( 'init', 'noor_register_contact_cpt' );
-
 function noor_handle_contact_form() {
     $phone   = isset( $_POST['contact_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_phone'] ) ) : '';
     $message = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['contact_message'] ) ) : '';
@@ -182,17 +172,6 @@ function noor_handle_contact_form() {
     $body        = "Phone: $phone\n\n$message";
 
     wp_mail( $admin_email, $subject, $body );
-    $post_id = wp_insert_post( array(
-        'post_type'   => 'contact_message',
-        'post_title'  => $phone,
-        'post_content'=> $message,
-        'post_status' => 'private'
-    ) );
-
-    if ( $post_id ) {
-        update_post_meta( $post_id, 'contact_phone', $phone );
-    }
-
     wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url() );
     exit;
 }
