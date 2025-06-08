@@ -9,23 +9,25 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <section class="hero">
   <header>
     <nav class="nav-bar">
-      <a href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="Noor Class Logo" id="logo" />
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/logo.png' ); ?>" alt="Noor Class Logo" id="logo" />
       </a>
-      <ul class="nav-items">
-        <a href="#"><li class="nav-item">About Us</li></a>
-        <a href="#"><li class="nav-item">Contact Us</li></a>
-        <a href="#"><li class="nav-item">Pricings</li></a>
-        <a href="#"><li class="nav-item">Blogs</li></a>
-        <a href="#">
-          <button class="pri-btn" id="nav-free-trial">
-            <span>Free Trial</span>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/gift-icon.png" alt="gift-icon" class="btn-icon" />
-          </button>
-        </a>
-      </ul>
+      <?php
+        wp_nav_menu( array(
+          'theme_location' => 'primary',
+          'container' => false,
+          'menu_class' => 'nav-items',
+        ) );
+      ?>
+      <a href="#">
+        <button class="pri-btn" id="nav-free-trial">
+          <span>Free Trial</span>
+          <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/gift-icon.png' ); ?>" alt="gift-icon" class="btn-icon" />
+        </button>
+      </a>
     </nav>
   </header>

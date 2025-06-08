@@ -1,208 +1,33 @@
 <?php get_header(); ?>
       <div class="hero-content">
         <div class="hero-text">
-          <h1 id="hero-title">Post Title</h1>
-          <h2 id="hero-description">Some Post Description</h2>
+          <h1 id="hero-title"><?php the_archive_title(); ?></h1>
         </div>
       </div>
     </section>
     <section class="all-posts">
       <div class="post-container">
         <div class="posts">
-          <a href="#"
-            ><div class="post-card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/post-thumbnail.jpg"
-                alt="Learn Quran Online"
-                class="post-thumbnail"
-              />
-              <div class="post-info">
-                <h2 class="post-title">
-                  Why Teaching Quran to Children at an Early Age Matters
-                </h2>
-                <h3 class="post-author-and-date">Manar Karam - 6/3/2025</h3>
-                <p class="post-description">
-                  The early years are the foundation of a child’s character and
-                  spirituality. In this article, we explore the importance of
-                  Quran education in shaping a child’s heart, mind, and
-                  connection to Allah ﷻ — and how online learning makes it
-                  easier than ever.
-                </p>
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <a href="<?php the_permalink(); ?>">
+              <div class="post-card">
+                <?php if ( has_post_thumbnail() ) : ?>
+                  <?php the_post_thumbnail( 'medium', array( 'class' => 'post-thumbnail' ) ); ?>
+                <?php endif; ?>
+                <div class="post-info">
+                  <h2 class="post-title"><?php the_title(); ?></h2>
+                  <h3 class="post-author-and-date"><?php the_author(); ?> - <?php the_time( get_option( 'date_format' ) ); ?></h3>
+                  <p class="post-description"><?php echo get_the_excerpt(); ?></p>
+                </div>
               </div>
-            </div></a
-          >
-          <a href="#"
-            ><div class="post-card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/post-thumbnail.jpg"
-                alt="Learn Quran Online"
-                class="post-thumbnail"
-              />
-              <div class="post-info">
-                <h2 class="post-title">
-                  The Virtues of Learning the Quran: What the Prophet ﷺ Taught
-                  Us
-                </h2>
-                <h3 class="post-author-and-date">Manar Karam - 6/3/2025</h3>
-                <p class="post-description">
-                  The early years are the foundation of a child’s character and
-                  spirituality. In this article, we explore the importance of
-                  Quran education in shaping a child’s heart, mind, and
-                  connection to Allah ﷻ — and how online learning makes it
-                  easier than ever.
-                </p>
-              </div>
-            </div></a
-          >
-          <a href="#"
-            ><div class="post-card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/post-thumbnail.jpg"
-                alt="Learn Quran Online"
-                class="post-thumbnail"
-              />
-              <div class="post-info">
-                <h2 class="post-title">
-                  How to Help Your Child Fall in Love with Salah and Islamic
-                  Values
-                </h2>
-                <h3 class="post-author-and-date">Manar Karam - 6/3/2025</h3>
-                <p class="post-description">
-                  Building a strong Islamic identity starts at home. Learn
-                  practical tips for inspiring your child to love Salah, make
-                  du’aa, and understand the beauty of living according to
-                  Islamic principles — in ways that are fun, gentle, and
-                  age-appropriate.
-                </p>
-              </div>
-            </div></a
-          >
-          <a href="#"
-            ><div class="post-card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/post-thumbnail.jpg"
-                alt="Learn Quran Online"
-                class="post-thumbnail"
-              />
-              <div class="post-info">
-                <h2 class="post-title">
-                  Why Teaching Quran to Children at an Early Age Matters
-                </h2>
-                <h3 class="post-author-and-date">Manar Karam - 6/3/2025</h3>
-                <p class="post-description">
-                  The early years are the foundation of a child’s character and
-                  spirituality. In this article, we explore the importance of
-                  Quran education in shaping a child’s heart, mind, and
-                  connection to Allah ﷻ — and how online learning makes it
-                  easier than ever.
-                </p>
-              </div>
-            </div></a
-          >
-          <a href="#"
-            ><div class="post-card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/post-thumbnail.jpg"
-                alt="Learn Quran Online"
-                class="post-thumbnail"
-              />
-              <div class="post-info">
-                <h2 class="post-title">
-                  How to Help Your Child Fall in Love with Salah and Islamic
-                  Values
-                </h2>
-                <h3 class="post-author-and-date">Manar Karam - 6/3/2025</h3>
-                <p class="post-description">
-                  Building a strong Islamic identity starts at home. Learn
-                  practical tips for inspiring your child to love Salah, make
-                  du’aa, and understand the beauty of living according to
-                  Islamic principles — in ways that are fun, gentle, and
-                  age-appropriate.
-                </p>
-              </div>
-            </div></a
-          >
+            </a>
+          <?php endwhile; else : ?>
+            <p><?php esc_html_e( 'No posts found.', 'noor-class' ); ?></p>
+          <?php endif; ?>
         </div>
         <div class="navigator">
-            <a href="#" id="back-btn">< </a>
-            <span id="current-page">1</span>
-            <a href="#" id="next-btn">></a>
-        </div>
-      </div>
-      <div class="sidebar">
-        <div class="sidebar-section" id="trending-posts">
-          <h3 class="sidebar-section-title">Trending Articles</h3>
-          <ul>
-            <a href="#"
-              ><li class="post-link">
-                Building a Strong Islamic Identity in the Digital Age
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                Online Quran Classes vs. Traditional Learning: Which Is Better
-                for Your Child?
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                The Role of Islamic Education in Developing Good Manners
-                (Akhlaq)
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                Raising Righteous Children: Parenting Tips from the Qur’an and
-                Sunnah
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                The Spiritual Benefits of Memorizing the Qur’an
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                How to Start Teaching Tajweed to Beginners (Even if You’re Not
-                an Expert)
-              </li></a
-            >
-          </ul>
-        </div>
-        <div class="sidebar-section" id="latest-posts">
-          <h3 class="sidebar-section-title">Latest Articles</h3>
-          <ul>
-            <a href="#"
-              ><li class="post-link">
-                Making the Most of Learning During the Blessed Days (Ramadan,
-                Dhul-Hijjah, etc.)
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                Encouraging Your Child to Speak Arabic: A Language of the Qur’an
-              </li></a
-            >
-            <a href="#"
-              ><li class="post-link">
-                Choosing the Right Female Quran Teacher for Your Daughter
-              </li></a
-            >
-          </ul>
-        </div>
-        <div class="sidebar-section" id="newsletter-form">
-          <h3 class="sidebar-section-title">Subscribe To Newsletter</h3>
-          <form action="#" class="newsletter-form">
-            <input
-              type="email"
-              class="text-field"
-              placeholder="Email ..."
-              id="sidebar-newsletter-field"
-            />
-            <button class="pri-btn" type="submit">Subscribe</button>
-          </form>
+          <?php the_posts_pagination(); ?>
         </div>
       </div>
     </section>
-    
 <?php get_footer(); ?>

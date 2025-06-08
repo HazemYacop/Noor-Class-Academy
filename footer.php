@@ -2,15 +2,16 @@
 </section>
 <footer>
   <div class="footer-container">
-    <a href="#"><h3 id="footer-logo"><span style="font-weight: bold">Noor</span>Class Academy</h3></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h3 id="footer-logo"><span style="font-weight: bold">Noor</span>Class Academy</h3></a>
     <div class="footer-column">
       <h4 class="footer-column-title">Navigation</h4>
-      <ul class="footer-items">
-        <a href="#"><li class="footer-item">Home</li></a>
-        <a href="#"><li class="footer-item">About Us</li></a>
-        <a href="#"><li class="footer-item">Contact Us</li></a>
-        <a href="#"><li class="footer-item">Free Trial</li></a>
-      </ul>
+      <?php
+        wp_nav_menu( array(
+          'theme_location' => 'footer',
+          'container' => false,
+          'menu_class' => 'footer-items',
+        ) );
+      ?>
     </div>
     <div class="footer-column">
       <h4 class="footer-column-title">Contact Us</h4>

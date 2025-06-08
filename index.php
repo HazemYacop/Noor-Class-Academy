@@ -277,53 +277,24 @@
         </svg>
       </div>
     </section>
-    <section class="blogs">
-      <h2 id="blogs-intro-title">Explore Our Blogs</h2>
-      <div class="blogs-cards">
-        <a href="#">
+  <section class="blogs">
+    <h2 id="blogs-intro-title">Explore Our Blogs</h2>
+    <div class="blogs-cards">
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <a href="<?php the_permalink(); ?>">
           <div class="blog-card">
-            <h3 class="blog-title">
-              Why Teaching Quran to Children at an Early Age Matters
-            </h3>
-            <p class="blog-description">
-              The early years are the foundation of a child’s character and
-              spirituality. In this article, we explore the importance of Quran
-              education in shaping a child’s heart, mind, and connection to
-              Allah ﷻ — and how online learning makes it easier than ever.
-            </p>
+            <h3 class="blog-title"><?php the_title(); ?></h3>
+            <p class="blog-description"><?php echo get_the_excerpt(); ?></p>
           </div>
         </a>
-        <a href="#">
-          <div class="blog-card">
-            <h3 class="blog-title">
-              The Virtues of Learning the Quran: What the Prophet ﷺ Taught Us
-            </h3>
-            <p class="blog-description">
-              “The best of you are those who learn the Qur’an and teach it.”
-              (Bukhari) — This post dives into powerful hadiths and Quranic
-              verses that highlight the spiritual and practical rewards of
-              learning and teaching the Qur’an in our daily lives.
-            </p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="blog-card">
-            <h3 class="blog-title">
-              How to Help Your Child Fall in Love with Salah and Islamic Values
-            </h3>
-            <p class="blog-description">
-              Building a strong Islamic identity starts at home. Learn practical
-              tips for inspiring your child to love Salah, make du’aa, and
-              understand the beauty of living according to Islamic principles —
-              in ways that are fun, gentle, and age-appropriate.
-            </p>
-          </div>
-        </a>
-      </div>
-      <a href="#" class="pri-link" id="explore-all-blogs-btn"
-        >Explore All Blogs</a
-      >
-    </section>
+      <?php endwhile; else : ?>
+        <p><?php esc_html_e( 'No posts found.', 'noor-class' ); ?></p>
+      <?php endif; ?>
+    </div>
+    <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="pri-link" id="explore-all-blogs-btn">
+      Explore All Blogs
+    </a>
+  </section>
     <section class="newsletter">
       <div class="newsletter-container">
         <h3 id="newsletter-title">Subscribe To Our Newsletter</h3>
