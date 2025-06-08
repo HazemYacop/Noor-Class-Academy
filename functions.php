@@ -16,4 +16,32 @@ function noor_class_theme_setup() {
     ) );
 }
 add_action( 'after_setup_theme', 'noor_class_theme_setup' );
+
+function noor_class_add_menu_item_class( $classes, $item, $args ) {
+    if ( $args->theme_location === 'primary' ) {
+        $classes[] = 'nav-item';
+    } elseif ( $args->theme_location === 'footer' ) {
+        $classes[] = 'footer-item';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'noor_class_add_menu_item_class', 10, 3 );
+
+function noor_class_default_menu() {
+    echo '<ul class="nav-items">';
+    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/about-us' ) ) . '">About Us</a></li>';
+    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/contact-us' ) ) . '">Contact Us</a></li>';
+    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/pricings' ) ) . '">Pricings</a></li>';
+    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/all-posts' ) ) . '">Blogs</a></li>';
+    echo '</ul>';
+}
+
+function noor_class_footer_menu_fallback() {
+    echo '<ul class="footer-items">';
+    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/about-us' ) ) . '">About Us</a></li>';
+    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/contact-us' ) ) . '">Contact Us</a></li>';
+    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/pricings' ) ) . '">Pricings</a></li>';
+    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/all-posts' ) ) . '">Blogs</a></li>';
+    echo '</ul>';
+}
 ?>

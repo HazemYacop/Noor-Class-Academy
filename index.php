@@ -10,7 +10,7 @@
             subjects through live, one-on-one classes.
           </h2>
           <div class="cta-btns">
-            <a href="#"
+            <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>"
               ><button class="pri-btn">
                 <span>Book a Free Trial</span>
                 <img
@@ -19,7 +19,7 @@
                   class="btn-icon"
                 /></button
             ></a>
-            <a href="#"><button class="ter-btn">See Our Pricings</button></a>
+            <a href="<?php echo esc_url( home_url( '/pricings' ) ); ?>"><button class="ter-btn">See Our Pricings</button></a>
           </div>
         </div>
         <img
@@ -49,8 +49,8 @@
             engaging, and meaningful for students worldwide.
           </p>
           <div class="cta-btns">
-            <a href="#"><button class="sec-btn">Meet Our Teachers</button></a>
-            <a href="#"><button class="ter-btn reverse">Contact Us</button></a>
+            <a href="<?php echo esc_url( home_url( '/meet-the-teachers' ) ); ?>"><button class="sec-btn">Meet Our Teachers</button></a>
+            <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>"><button class="ter-btn reverse">Contact Us</button></a>
           </div>
         </div>
         <img
@@ -148,7 +148,7 @@
               learn.
             </p>
           </div>
-          <a href="#"
+          <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>"
             ><button class="pri-btn">
               <span>Free Trial</span>
               <img
@@ -199,7 +199,7 @@
               <li class="benefit">✔ First session for free</li>
             </ul>
           </div>
-          <a href="#"
+          <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>"
             ><button class="pri-btn">
               <span>Free Trial</span>
               <img
@@ -233,7 +233,7 @@
               <li class="benefit">✔ First session for free</li>
             </ul>
           </div>
-          <a href="#"
+          <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>"
             ><button class="pri-btn">
               <span>Free Trial</span>
               <img
@@ -259,7 +259,7 @@
               <li class="benefit">✔ First session for free</li>
             </ul>
           </div>
-          <a href="#"
+          <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>"
             ><button class="pri-btn">
               <span>Free Trial</span>
               <img
@@ -270,7 +270,7 @@
           ></a>
         </div>
       </div>
-      <a href="#" id="custom-plan" class="pri-link">Need a custom plan ?</a>
+      <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" id="custom-plan" class="pri-link">Need a custom plan ?</a>
       <div class="triangle-shape" class="down-sliding" id="pricings-slide">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
           <polygon points="100,0 100,100 0,100" fill="#31493C" />
@@ -291,23 +291,14 @@
         <p><?php esc_html_e( 'No posts found.', 'noor-class' ); ?></p>
       <?php endif; ?>
     </div>
-    <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="pri-link" id="explore-all-blogs-btn">
+    <a href="<?php echo esc_url( home_url( '/all-posts' ) ); ?>" class="pri-link" id="explore-all-blogs-btn">
       Explore All Blogs
     </a>
   </section>
     <section class="newsletter">
       <div class="newsletter-container">
         <h3 id="newsletter-title">Subscribe To Our Newsletter</h3>
-        <form action="#" class="newsletter-form">
-          <input
-            type="email"
-            class="text-field"
-            placeholder="Email ..."
-          />
-          <button class="pri-btn newsletter-sub-btn" type="submit">
-            Subscribe
-          </button>
-        </form>
+        <?php echo do_shortcode( '[newsletter_form]' ); ?>
       </div>
     </section>
     <section class="contact-us">
