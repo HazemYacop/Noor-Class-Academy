@@ -172,7 +172,6 @@ function noor_handle_contact_form() {
     $body        = "Phone: $phone\n\n$message";
 
     wp_mail( $admin_email, $subject, $body );
-
     wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url() );
     exit;
 }

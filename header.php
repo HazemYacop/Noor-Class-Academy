@@ -16,11 +16,12 @@
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/logo.png' ); ?>" alt="Noor Class Logo" id="logo" />
       </a>
-      <?php
+      <div class="nav-items">
+        <?php
         wp_nav_menu( array(
           'theme_location' => 'primary',
           'container'      => false,
-          'menu_class'     => 'nav-items',
+          'menu_class'     => 'nav-menu',
           'fallback_cb'    => 'noor_class_default_menu',
         ) );
       ?>
@@ -30,5 +31,6 @@
           <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/gift-icon.png' ); ?>" alt="gift-icon" class="btn-icon" />
         </button>
       </a>
+      </div>
     </nav>
   </header>
