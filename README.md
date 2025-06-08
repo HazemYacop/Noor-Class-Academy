@@ -8,3 +8,4 @@ This theme was converted from a static website. To enable the newsletter form di
 4. The shortcode `[newsletter_form]` used in the theme templates will then render the subscription form.
 
 The theme also registers a sidebar ("Primary Sidebar") that appears on archive and single post pages. Add widgets to it under **Appearance → Widgets**.
+Two custom widgets are included for displaying trending posts (ordered by comment count) and latest posts. After activating the theme you will see **Trending Posts** and **Latest Posts** in the widget list. Drag them to the sidebar to show links styled like the static design.
