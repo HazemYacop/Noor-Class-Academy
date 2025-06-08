@@ -30,6 +30,19 @@ function noor_class_theme_setup() {
 }
 add_action( 'after_setup_theme', 'noor_class_theme_setup' );
 
+function noor_class_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Primary Sidebar', 'noor-class' ),
+        'id'            => 'primary-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on blog posts and archives.', 'noor-class' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s sidebar-section">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar-section-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'noor_class_widgets_init' );
+
 function noor_class_add_menu_item_class( $classes, $item, $args ) {
     if ( $args->theme_location === 'primary' ) {
         $classes[] = 'nav-item';

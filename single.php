@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div class="hero-content">
         <div class="hero-text">
           <h1 id="hero-title"><?php the_title(); ?></h1>
@@ -12,16 +13,12 @@
           <?php the_post_thumbnail( 'full', array( 'id' => 'thumbnail-img' ) ); ?>
         <?php endif; ?>
         <div class="post-text">
-          <?php
-            if ( have_posts() ) :
-              while ( have_posts() ) : the_post();
-                the_content();
-              endwhile;
-            else :
-              echo '<p>' . esc_html__( 'No content found.', 'noor-class' ) . '</p>';
-            endif;
-          ?>
+          <?php the_content(); ?>
         </div>
       </div>
+      <?php get_sidebar(); ?>
     </section>
+<?php endwhile; else : ?>
+    <p><?php esc_html_e( 'No content found.', 'noor-class' ); ?></p>
+<?php endif; ?>
 <?php get_footer(); ?>
