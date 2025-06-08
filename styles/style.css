@@ -34,7 +34,7 @@ body {
   gap: 2rem;
 }
 
-.nav-item {
+.nav-item a {
   font-family: "Rethink Sans", sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
@@ -42,7 +42,7 @@ body {
   transition: 0.2s;
 }
 
-.nav-item:hover {
+.nav-item a:hover {
   transform: translateY(-0.15rem);
   color: #41604f;
 }
@@ -740,7 +740,7 @@ footer {
   gap: 0.5rem;
 }
 
-.footer-item {
+.footer-item a {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -748,7 +748,7 @@ footer {
   transition: 0.2s;
 }
 
-.footer-item:hover {
+.footer-item a:hover {
   color: #4abe90;
   transform: translateY(-0.05rem);
 }

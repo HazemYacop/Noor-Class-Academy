@@ -8,8 +8,9 @@
       <?php
         wp_nav_menu( array(
           'theme_location' => 'footer',
-          'container' => false,
-          'menu_class' => 'footer-items',
+          'container'      => false,
+          'menu_class'     => 'footer-items',
+          'fallback_cb'    => 'noor_class_footer_menu_fallback',
         ) );
       ?>
     </div>
@@ -20,10 +21,7 @@
         <a href="tel:+201102401767"><li class="footer-item">+20 1102401767</li></a>
       </ul>
     </div>
-    <form action="#" class="newsletter-form">
-      <input type="email" class="text-field" placeholder="Email ..." />
-      <button class="sec-btn" type="submit">Subscribe</button>
-    </form>
+    <?php echo do_shortcode( '[newsletter_form]' ); ?>
   </div>
   <span id="love">Made with ❤ by <a href="#">Pyxelate</a></span>
 </footer>
