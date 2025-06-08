@@ -357,17 +357,21 @@
             </li>
           </ul>
         </div>
-        <form action="#" id="contact-us-form">
+        <form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="contact-us-form">
+          <input type="hidden" name="action" value="noor_contact_form" />
           <input
             type="tel"
+            name="contact_phone"
             class="text-field"
             placeholder="Whatsapp Number ..."
+            required
           />
           <textarea
-            name="contact-message"
+            name="contact_message"
             id="contact-message"
             placeholder="Your Message ..."
             class="text-field"
+            required
           ></textarea>
           <button class="pri-btn" type="submit">Submit Message</button>
         </form>

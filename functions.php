@@ -3,7 +3,9 @@ function noor_class_theme_scripts() {
     wp_enqueue_style( 'noor-main-style', get_template_directory_uri() . '/styles/style.css', array(), '1.0' );
     wp_enqueue_style( 'noor-bg-style', get_template_directory_uri() . '/styles/bg.css', array(), '1.0' );
 
-    if ( is_page() ) {
+    if ( is_page_template( 'page-all-posts.php' ) ) {
+        wp_enqueue_style( 'noor-all-posts-style', get_template_directory_uri() . '/styles/all-posts.css', array( 'noor-main-style' ), '1.0' );
+    } elseif ( is_page() ) {
         wp_enqueue_style( 'noor-page-style', get_template_directory_uri() . '/styles/page.css', array( 'noor-main-style' ), '1.0' );
     }
 
@@ -21,7 +23,8 @@ add_action( 'wp_enqueue_scripts', 'noor_class_theme_scripts' );
 
 function noor_class_theme_setup() {
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
+    // Ensure featured images are available for posts and pages.
+    add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'noor-class' ),
@@ -152,4 +155,27 @@ function noor_register_custom_widgets() {
     register_widget( 'Noor_Latest_Widget' );
 }
 add_action( 'widgets_init', 'noor_register_custom_widgets' );
+
+function noor_set_posts_per_page( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && ( $query->is_home() || $query->is_archive() ) ) {
+        $query->set( 'posts_per_page', 6 );
+    }
+}
+add_action( 'pre_get_posts', 'noor_set_posts_per_page' );
+
+function noor_handle_contact_form() {
+    $phone   = isset( $_POST['contact_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_phone'] ) ) : '';
+    $message = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['contact_message'] ) ) : '';
+
+    $admin_email = get_option( 'admin_email' );
+    $subject     = __( 'New Contact Message', 'noor-class' );
+    $body        = "Phone: $phone\n\n$message";
+
+    wp_mail( $admin_email, $subject, $body );
+
+    wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url() );
+    exit;
+}
+add_action( 'admin_post_nopriv_noor_contact_form', 'noor_handle_contact_form' );
+add_action( 'admin_post_noor_contact_form', 'noor_handle_contact_form' );
 ?>
