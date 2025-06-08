@@ -581,7 +581,7 @@ input:focus {
 }
 
 .newsletter {
-  background-image: url("/assets/newsletter-bg.png");
+  background-image: url("../assets/newsletter-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
