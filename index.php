@@ -306,7 +306,7 @@
     <section class="newsletter">
       <div class="newsletter-container">
         <h3 id="newsletter-title">Subscribe To Our Newsletter</h3>
-        <?php echo do_shortcode( '[newsletter_form]' ); ?>
+        <?php echo do_shortcode( '[newsletter_form form="1"]' ); ?>
       </div>
     </section>
     <section class="contact-us">

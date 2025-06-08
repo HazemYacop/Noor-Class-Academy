@@ -247,7 +247,8 @@ input:focus {
 }
 
 #sidebar-newsletter-field {
-  min-width: 100%;
+  min-width: 0;
+  width: 13rem;
 }
 
 .hero-text {

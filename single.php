@@ -3,7 +3,6 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 id="hero-title"><?php the_title(); ?></h1>
-          <h2 id="hero-description"><?php the_excerpt(); ?></h2>
         </div>
       </div>
     </section>

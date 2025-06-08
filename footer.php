@@ -1,5 +1,3 @@
-      <div class="triangle-shape" class="down-sliding" id="footer-slide"></div>
-</section>
 <footer>
   <div class="footer-container">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h3 id="footer-logo"><span style="font-weight: bold">Noor</span>Class Academy</h3></a>
@@ -25,7 +23,7 @@
         </li>
       </ul>
     </div>
-    <?php echo do_shortcode( '[newsletter_form]' ); ?>
+    <?php echo do_shortcode( '[newsletter_form form="2"]' ); ?>
   </div>
   <span id="love">Made with ❤ by <a href="#">Pyxelate</a></span>
 </footer>

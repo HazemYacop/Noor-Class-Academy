@@ -22,7 +22,7 @@
     </div>
     <div class="sidebar-section" id="newsletter-form">
       <h3 class="sidebar-section-title"><?php esc_html_e( 'Subscribe To Newsletter', 'noor-class' ); ?></h3>
-      <?php echo do_shortcode( '[newsletter_form]' ); ?>
+      <?php echo do_shortcode( '[newsletter_form form="3"]' ); ?>
     </div>
   </div>
 <?php endif; ?>
