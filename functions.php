@@ -182,7 +182,6 @@ function noor_handle_contact_form() {
     $body        = "Phone: $phone\n\n$message";
 
     wp_mail( $admin_email, $subject, $body );
-
     $post_id = wp_insert_post( array(
         'post_type'   => 'contact_message',
         'post_title'  => $phone,
