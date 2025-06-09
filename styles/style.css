@@ -780,3 +780,18 @@ footer {
   padding-bottom: 0.3em;
   text-decoration: none;
 }
+
+/* Sidebar post links */
+.post-link a {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #31493c;
+  transition: 0.2s;
+}
+
+.post-link a:hover {
+  transform: translateY(-0.1rem);
+  color: #26392f;
+  text-decoration: underline;
+}

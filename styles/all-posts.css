@@ -128,6 +128,7 @@ input:focus {
 
 .post-card {
   display: flex;
+  align-items: stretch;
   background-color: #31493c;
   border-radius: 0.5rem;
   transition: 0.2s;
@@ -140,7 +141,8 @@ input:focus {
 
 .post-thumbnail {
   width: 24rem;
-  height: 13.5rem;
+  height: 100%;
+  object-fit: cover;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
