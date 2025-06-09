@@ -111,7 +111,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0 9rem;
+  padding: 3rem 0 9rem;
 }
 
 .all-posts {
@@ -139,10 +139,9 @@ input:focus {
 }
 
 .post-thumbnail {
-  width: 30%;
+  width: 24rem;
+  height: 13.5rem;
   border-radius: 0.5rem 0 0 0.5rem;
-  height: 100%;
-  object-fit: cover;
 }
 
 .post-info {
