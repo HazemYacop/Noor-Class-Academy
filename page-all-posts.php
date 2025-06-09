@@ -27,7 +27,8 @@ get_header();
             <a href="<?php the_permalink(); ?>">
               <div class="post-card">
                 <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail( 'medium', array( 'class' => 'post-thumbnail' ) ); ?>
+                  <?php $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>
+                  <div class="post-thumbnail" style="background-image:url('<?php echo esc_url( $thumb_url ); ?>')"></div>
                 <?php endif; ?>
                 <div class="post-info">
                   <h2 class="post-title"><?php the_title(); ?></h2>
