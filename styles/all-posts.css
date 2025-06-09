@@ -141,7 +141,6 @@ input:focus {
 
 .post-thumbnail {
   width: 24rem;
-  height: 13.5rem;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem 0 0 0.5rem;
