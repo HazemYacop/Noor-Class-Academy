@@ -310,3 +310,129 @@ footer {
   padding-bottom: 0.3em;
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 2rem;
+  }
+  .plans-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+  }
+
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  #hero-img {
+    width: 80%;
+    max-width: 20rem;
+    align-self: center;
+  }
+
+  .about-us-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .about-us-text {
+    max-width: 100%;
+  }
+
+  #about-us-img {
+    width: 80%;
+    max-width: 20rem;
+  }
+
+  .wcu-points {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0 2rem;
+  }
+
+  .hdiw-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hdiw-step {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan,
+  #most-popular-plan {
+    width: 90%;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .blogs-cards {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+
+  .contact-us-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #contact-us-form > p,
+  #contact-us-form {
+    width: 100%;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-title {
+    font-size: 2.2rem;
+  }
+  #hero-description {
+    font-size: 1rem;
+  }
+  #about-us-title {
+    font-size: 2.2rem;
+  }
+  #wcu-title,
+  #hdiw-title {
+    font-size: 2.4rem;
+  }
+}
