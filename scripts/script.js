@@ -5,3 +5,9 @@ $( ".pri-btn" ).hover(
     $( "img", this ).removeClass( "icon-rotated" );
   }
 );
+
+$( document ).ready( function() {
+  $( '.hamburger' ).on( 'click', function() {
+    $( '.nav-items' ).toggleClass( 'show' );
+  } );
+} );
