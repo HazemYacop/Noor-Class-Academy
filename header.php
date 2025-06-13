@@ -16,6 +16,11 @@
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/logo.png' ); ?>" alt="Noor Class Logo" id="logo" />
       </a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="nav-items">
         <?php
         wp_nav_menu( array(
