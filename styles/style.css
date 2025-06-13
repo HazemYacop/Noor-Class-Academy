@@ -796,7 +796,7 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1311px) {
   .hero-content {
     padding: 0 2rem;
   }
