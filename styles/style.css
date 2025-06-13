@@ -796,103 +796,278 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 1311px) {
+@media (max-width: 1300px) {
   .hero-content {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
   .plans-container {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .footer-container {
+    gap: 3rem;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1230px) {
+  .plans-container {
+    padding: 0 2rem;
+  }
+  #most-popular-plan {
+    top: 0;
+  }
+}
+
+@media (max-width: 1120px) {
+  #hero-title {
+    font-size: 3.4rem;
+  }
+
+  #hero-description {
+    font-size: 1.2rem;
+  }
+
+  #hero-img {
+    width: 30rem;
+  }
+
+  footer .footer-container {
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
   .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1.5rem 2rem;
   }
 
   .nav-items {
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     gap: 1rem;
     margin-top: 1rem;
   }
 
+  .hero {
+    justify-content: left;
+  }
+
   .hero-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
   .hero-text {
-    width: 100%;
+    width: 95%;
+    gap: 3rem;
+  }
+
+  #hero-title {
+    font-size: 5rem;
+  }
+
+  #hero-description {
+    width: 90%;
+    font-size: 1.7rem;
   }
 
   #hero-img {
-    width: 80%;
-    max-width: 20rem;
-    align-self: center;
+    display: none;
+  }
+
+  .pri-btn,
+  .sec-btn {
+    gap: 2rem;
+    padding: 1.2rem 4rem;
+    font-size: 1.7rem;
+  }
+
+  .ter-btn {
+    font-size: 1.7rem;
+  }
+
+  .triangle-shape {
+    padding-top: 2rem;
   }
 
   .about-us-container {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 0 2rem;
-    gap: 2rem;
+    padding: 4rem 2rem;
   }
 
   .about-us-text {
-    max-width: 100%;
+    max-width: 90%;
+    gap: 4rem;
+  }
+
+  #about-us-description {
+    font-size: 1.8rem;
+  }
+
+  .cta-btns {
+    justify-content: center;
   }
 
   #about-us-img {
-    width: 80%;
-    max-width: 20rem;
+    display: none;
+  }
+
+  .why-choose-us {
+    gap: 7rem;
+    padding: 5rem 0;
+  }
+
+  #wcu-title,
+  #hdiw-title,
+  #blogs-intro-title,
+  #newsletter-title,
+  #contact-us-title {
+    font-size: 4.5rem;
   }
 
   .wcu-points {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 4rem;
+    gap: 2rem;
+  }
+
+  .wcu-point {
+    gap: 2rem;
+  }
+
+  .wcu-subtitle {
+    font-size: 2.3rem;
+  }
+
+  .wcu-point-description,
+  #hdiw-description {
+    font-size: 1.5rem;
+  }
+
+  .hdiw-step-title {
+    font-size: 3rem;
+  }
+
+  .hdiw-step-description {
+    font-size: 2rem;
   }
 
   .hdiw-steps {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  .hdiw-step-text {
+    gap: 3rem;
   }
 
   .hdiw-step {
-    width: 90%;
+    width: 70%;
     margin-bottom: 2rem;
+    padding: 2rem 4rem;
+    height: 30rem;
   }
 
   .separator {
     display: none;
   }
 
+  .pricings {
+    width: 100%;
+  }
+
   .plans-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .plan,
   #most-popular-plan {
-    width: 90%;
     top: 0;
     box-shadow: none;
+    min-height: 40rem;
+    width: 30rem;
+    padding: 4rem 5rem;
+    gap: 4rem;
+  }
+
+  .plan-title,
+  .plan-price,
+  #mp-title {
+    font-size: 2.6rem;
+  }
+
+  .plan-benefits {
+    gap: 3.2rem;
+  }
+
+  .benefit {
+    font-size: 1.7rem;
   }
 
   .blogs-cards {
     flex-direction: column;
     padding: 0 2rem;
     gap: 1.5rem;
+    width: 100%;
+  }
+
+  .blog-card {
+    padding: 1.3rem 3rem;
+    gap: 1rem;
+  }
+
+  .blog-title {
+    font-size: 4rem;
+  }
+
+  .blog-description {
+    font-size: 1.8rem;
+  }
+
+  .pri-link {
+    font-size: 1.7rem;
+  }
+
+  .newsletter-container {
+    padding: 4rem 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  #newsletter-form {
+    gap: 3rem;
+  }
+
+  .text-field {
+    padding: 1.3rem 2rem;
+    font-size: 1.3rem;
+    min-width: 30rem;
   }
 
   .contact-us-container {
     flex-direction: column;
-    gap: 2rem;
+    width: 100%;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  #contact-us-context {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .contact-channels-container {
+    align-items: center;
+    gap: 5rem;
+    width: 80%;
   }
 
   #contact-us-form > p,
@@ -902,7 +1077,27 @@ footer {
 
   footer .footer-container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+  }
+
+  #footer-logo {
+    font-size: 3rem;
+  }
+
+  .footer-column {
+    gap: 2.2rem;
+  }
+
+  .footer-column-title {
+    font-size: 2rem;
+  }
+
+  .footer-items {
+    gap: 1rem;
+  }
+
+  .footer-item a {
+    font-size: 1.4rem;
   }
 }
 
