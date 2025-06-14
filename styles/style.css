@@ -50,6 +50,18 @@ body {
   transition: 0.3s;
 }
 
+.hamburger.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 .nav-item a {
   font-family: "Rethink Sans", sans-serif;
   font-weight: bold;
@@ -865,11 +877,6 @@ footer {
     gap: 1rem;
   }
 
-  .nav-items.show {
-    display: flex;
-    gap: 3rem;
-    padding: 2rem 0;
-  }
 
   .nav-items .nav-menu {
     flex-direction: column;

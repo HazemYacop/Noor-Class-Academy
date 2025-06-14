@@ -8,6 +8,9 @@ $( ".pri-btn" ).hover(
 
 $( document ).ready( function() {
   $( '.hamburger' ).on( 'click', function() {
-    $( '.nav-items' ).toggleClass( 'show' );
+    $( '.nav-items' ).slideToggle( 200, function() {
+      $( this ).css( 'display', 'flex' );
+    } );
+    $( this ).toggleClass( 'active' );
   } );
 } );
