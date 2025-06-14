@@ -21,7 +21,7 @@
         <span></span>
         <span></span>
       </button>
-      <div class="nav-items">
+      <div class="nav-items-list">
         <button class="close-nav" aria-label="Close navigation">&times;</button>
         <?php
         wp_nav_menu( array(

@@ -9,19 +9,19 @@ $( ".pri-btn" ).hover(
 $( document ).ready( function() {
   $( '.hamburger' ).on( 'click', function() {
     $( this ).toggleClass( 'active' );
-    $( '.nav-items' ).toggleClass( 'open' );
+    $( '.nav-items-list' ).toggleClass( 'open' );
     $( 'body' ).toggleClass( 'menu-open' );
   } );
 
   $( '.close-nav' ).on( 'click', function() {
-    $( '.nav-items' ).removeClass( 'open' );
+    $( '.nav-items-list' ).removeClass( 'open' );
     $( '.hamburger' ).removeClass( 'active' );
     $( 'body' ).removeClass( 'menu-open' );
   } );
 
-  $( '.nav-items a, #nav-free-trial' ).on( 'click', function() {
-    if ( $( '.nav-items' ).hasClass( 'open' ) ) {
-      $( '.nav-items' ).removeClass( 'open' );
+  $( '.nav-items-list a, #nav-free-trial' ).on( 'click', function() {
+    if ( $( '.nav-items-list' ).hasClass( 'open' ) ) {
+      $( '.nav-items-list' ).removeClass( 'open' );
       $( '.hamburger' ).removeClass( 'active' );
       $( 'body' ).removeClass( 'menu-open' );
     }
@@ -39,7 +39,7 @@ $( document ).ready( function() {
 
       // Close mobile navigation after selecting a link
       if ( $( '.hamburger' ).is( ':visible' ) ) {
-        $( '.nav-items' ).removeClass( 'open' );
+        $( '.nav-items-list' ).removeClass( 'open' );
         $( '.hamburger' ).removeClass( 'active' );
         $( 'body' ).removeClass( 'menu-open' );
       }
