@@ -31,12 +31,10 @@
           'fallback_cb'    => 'noor_class_default_menu',
         ) );
       ?>
-      <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>">
-        <button class="pri-btn" id="nav-free-trial">
+        <a href="<?php echo esc_url( home_url( '/free-trial' ) ); ?>" class="pri-btn" id="nav-free-trial">
           <span>Free Trial</span>
           <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/gift-icon.png' ); ?>" alt="gift-icon" class="btn-icon" />
-        </button>
-      </a>
+        </a>
       </div>
     </nav>
   </header>
