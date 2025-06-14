@@ -55,7 +55,7 @@ body.menu-open {
   height: auto;
 }
 
-.nav-items {
+.nav-items-list {
   align-items: center;
   gap: 2rem;
 }
@@ -405,7 +405,7 @@ footer {
     padding: 1.5rem 2rem;
   }
 
-  .nav-items {
+  .nav-items-list {
     position: fixed;
     inset: 0;
     flex-direction: column;
@@ -431,7 +431,7 @@ footer {
     cursor: pointer;
   }
 
-  .nav-items.open {
+  .nav-items-list.open {
     transform: translateX(0);
     pointer-events: auto;
   }
