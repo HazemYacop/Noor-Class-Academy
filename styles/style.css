@@ -350,7 +350,6 @@ input:focus {
   box-shadow: 0 0 3rem 0.1rem #e1f4cb;
 }
 
-
 .separator {
   border-bottom: 3px solid #e1f4cb;
   padding-bottom: 20px;
@@ -868,12 +867,18 @@ footer {
 
   .nav-items.show {
     display: flex;
+    gap: 3rem;
+    padding: 2rem 0;
   }
 
   .nav-items .nav-menu {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .nav-item a {
+    font-size: 2rem;
   }
 
   .hero {
@@ -1010,7 +1015,7 @@ footer {
   .plans-container {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
   }
 
   .plan,
@@ -1019,7 +1024,7 @@ footer {
     box-shadow: none;
     min-height: 40rem;
     width: 30rem;
-    padding: 4rem 5rem;
+    padding: 4rem 4rem;
     gap: 4rem;
   }
 
@@ -1068,7 +1073,7 @@ footer {
     gap: 6rem;
   }
 
-  #newsletter-form {
+  .newsletter-form {
     gap: 3rem;
   }
 
@@ -1127,18 +1132,271 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 778px) {
+  .nav-bar {
+    padding: 2rem 3rem;
+  }
+
+  #logo {
+    width: 15rem;
+  }
+
+  .hamburger {
+    gap: 0.5rem;
+  }
+
+  .hamburger span {
+    width: 40px;
+    height: 4.8px;
+  }
+
   #hero-title {
-    font-size: 2.2rem;
+    font-size: 4rem;
+  }
+
+  #hero-description {
+    font-size: 1.6rem;
+  }
+
+  .pri-btn,
+  .sec-btn {
+    font-size: 1.7rem;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+  }
+
+  .triangle-shape {
+    bottom: -0.05rem;
+  }
+
+  .why-choose-us {
+    gap: 4rem;
+    padding: 5rem 0;
+  }
+
+  #wcu-title,
+  #hdiw-title,
+  #blogs-intro-title,
+  #newsletter-title,
+  #contact-us-title {
+    font-size: 3.5rem;
+  }
+
+  .wcu-points {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .wcu-point {
+    gap: 1.5rem;
+  }
+
+  .wcu-subtitle {
+    font-size: 2.3rem;
+  }
+
+  .wcu-point-description,
+  #hdiw-description {
+    width: 90%;
+  }
+
+  .hdiw-step-title {
+    font-size: 2.5rem;
+  }
+
+  .hdiw-step-description {
+    font-size: 1.7rem;
+  }
+
+  .hdiw-steps {
+    gap: 3rem;
+  }
+
+  .hdiw-step-text {
+    gap: 2rem;
+  }
+
+  .pricings {
+    width: 100%;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .plan,
+  #most-popular-plan {
+    min-height: 30rem;
+    width: 80%;
+    padding: 3rem 2rem;
+  }
+
+  .plan-title,
+  .plan-price,
+  #mp-title {
+    font-size: 2.6rem;
+  }
+
+  .plan-benefits {
+    gap: 3.2rem;
+  }
+
+  .benefit {
+    font-size: 1.7rem;
+  }
+
+  .blogs {
+    width: 100vw;
+    padding: 3rem 0;
+  }
+
+  .blogs-cards {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1.5rem;
+    width: 90%;
+  }
+
+  .blog-card {
+    padding: 1.3rem 3rem;
+    gap: 1rem;
+  }
+
+  .blog-title {
+    font-size: 3rem;
+  }
+
+  .blog-description {
+    font-size: 1.3rem;
+  }
+
+  .pri-link {
+    font-size: 1.7rem;
+  }
+
+  .newsletter-container {
+    padding: 4rem 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .newsletter-form {
+    gap: 2rem;
+    width: 90%;
+  }
+
+  #newsletter-title {
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .text-field {
+    padding: 1.3rem 2rem;
+    font-size: 1.3rem;
+    width: 85%;
+    min-width: 0;
+  }
+
+  .contact-us-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  #contact-us-context {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .contact-channels-container {
+    align-items: center;
+    gap: 5rem;
+    width: 80%;
+  }
+
+  #contact-us-form > p,
+  #contact-us-form {
+    width: 100%;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  #footer-logo {
+    font-size: 3rem;
+  }
+
+  .footer-column {
+    gap: 2.2rem;
+  }
+
+  .footer-column-title {
+    font-size: 2rem;
+  }
+
+  .footer-items {
+    gap: 1rem;
+  }
+
+  .footer-item a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo {
+    width: 13rem;
+  }
+  .hero-content {
+    padding: 0 2rem;
+  }
+  #hero-title {
+    font-size: 3.5rem;
   }
   #hero-description {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
   }
-  #about-us-title {
-    font-size: 2.2rem;
+  .pri-btn,
+  .sec-btn {
+    gap: 1.5rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+  }
+  .cta-btns {
+    gap: 1.6rem;
   }
   #wcu-title,
-  #hdiw-title {
-    font-size: 2.4rem;
+  #hdiw-title, #contact-us-title {
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  .wcu-subtitle {
+    font-size: 2rem;
+  }
+  .wcu-point-description {
+    font-size: 1.2rem;
+  }
+  .hdiw-step-description {
+    font-size: 1.4rem;
+  }
+  .contact-channels-container {
+    width: 100%;
+  }
+  #contact-us-form {
+    display: flex;
+    justify-content: center;
+  }
+  #contact-us-form > p {
+    width: 90%;
+    align-items: center;
   }
 }
