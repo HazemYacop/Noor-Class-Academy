@@ -402,65 +402,6 @@ footer {
     align-self: center;
   }
 
-  .about-us-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 2rem;
-    gap: 2rem;
-  }
-
-  .about-us-text {
-    max-width: 100%;
-  }
-
-  #about-us-img {
-    width: 80%;
-    max-width: 20rem;
-  }
-
-  .wcu-points {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0 2rem;
-  }
-
-  .hdiw-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hdiw-step {
-    width: 90%;
-    margin-bottom: 2rem;
-  }
-
-  .separator {
-    display: none;
-  }
-
-  .plans-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plan,
-  #most-popular-plan {
-    width: 90%;
-    top: 0;
-    box-shadow: none;
-  }
-
-  .blogs-cards {
-    flex-direction: column;
-    padding: 0 2rem;
-    gap: 1.5rem;
-  }
-
-  .contact-us-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-
   footer .footer-container {
     flex-direction: column;
     gap: 2rem;

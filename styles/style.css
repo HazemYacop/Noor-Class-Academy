@@ -681,6 +681,17 @@ input:focus {
   gap: 4rem;
 }
 
+#contact-us-form {
+  width: 45vw;
+}
+
+#contact-us-form > p {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2vh;
+}
+
 .contact-channels-container {
   display: flex;
   flex-direction: column;
@@ -713,8 +724,6 @@ input:focus {
   opacity: 75%;
   transform: translateY(-0.2rem);
 }
-
-
 
 .wpcf7-response-output {
   margin: 0 !important;
@@ -897,7 +906,6 @@ footer {
     transform: translateX(0);
     pointer-events: auto;
   }
-
 
   .nav-items-list .nav-menu {
     flex-direction: column;
@@ -1133,7 +1141,6 @@ footer {
     width: 80%;
   }
 
-
   footer .footer-container {
     flex-direction: column;
     gap: 4rem;
@@ -1348,7 +1355,6 @@ footer {
     width: 80%;
   }
 
-
   footer .footer-container {
     flex-direction: column;
     gap: 4rem;
@@ -1399,7 +1405,8 @@ footer {
     gap: 1.6rem;
   }
   #wcu-title,
-  #hdiw-title, #contact-us-title {
+  #hdiw-title,
+  #contact-us-title {
     padding: 0 1.5rem;
     text-align: center;
   }
