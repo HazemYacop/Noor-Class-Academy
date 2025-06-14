@@ -10,7 +10,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<section class="hero">
+<section id="hero" class="hero">
   <header>
     <nav class="nav-bar">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">

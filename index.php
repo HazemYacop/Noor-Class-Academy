@@ -19,7 +19,7 @@
                   class="btn-icon"
                 /></button
             ></a>
-            <a href="<?php echo esc_url( home_url( '/pricings' ) ); ?>"><button class="ter-btn">See Our Pricings</button></a>
+            <a href="<?php echo esc_url( home_url( '/#pricings' ) ); ?>"><button class="ter-btn">See Our Pricings</button></a>
           </div>
         </div>
         <img
@@ -34,7 +34,7 @@
         </svg>
       </div>
     </section>
-    <section class="about-us">
+    <section id="about-us" class="about-us">
       <div class="about-us-container">
         <div class="about-us-text">
           <h2 id="about-us-title">About Noor-Class</h2>
@@ -49,8 +49,8 @@
             engaging, and meaningful for students worldwide.
           </p>
           <div class="cta-btns">
-            <a href="<?php echo esc_url( home_url( '/meet-the-teachers' ) ); ?>"><button class="sec-btn">Meet Our Teachers</button></a>
-            <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>"><button class="ter-btn reverse">Contact Us</button></a>
+            <a href="<?php echo esc_url( home_url( '/#about-us' ) ); ?>"><button class="sec-btn">Meet Our Teachers</button></a>
+            <a href="<?php echo esc_url( home_url( '/#contact-us' ) ); ?>"><button class="ter-btn reverse">Contact Us</button></a>
           </div>
         </div>
         <img
@@ -65,7 +65,7 @@
         </svg>
       </div>
     </section>
-    <section class="why-choose-us">
+    <section id="why-choose-us" class="why-choose-us">
       <h2 id="wcu-title">Why Choose Noor-Class ?</h2>
       <div class="wcu-points">
         <div class="wcu-point">
@@ -130,7 +130,7 @@
         </div>
       </div>
     </section>
-    <section class="how-does-it-work">
+    <section id="how-does-it-work" class="how-does-it-work">
       <div class="hdiw-intro">
         <h2 id="hdiw-title">How Does It Work ?</h2>
         <h3 id="hdiw-description">
@@ -182,7 +182,7 @@
         </div>
       </div>
     </section>
-    <section class="pricings">
+    <section id="pricings" class="pricings">
       <div class="plans-container">
         <div class="plan">
           <div class="plan-context">
@@ -270,14 +270,14 @@
           ></a>
         </div>
       </div>
-      <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" id="custom-plan" class="pri-link">Need a custom plan ?</a>
+      <a href="<?php echo esc_url( home_url( '/#contact-us' ) ); ?>" id="custom-plan" class="pri-link">Need a custom plan ?</a>
       <div class="triangle-shape" class="down-sliding" id="pricings-slide">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
           <polygon points="100,0 100,100 0,100" fill="#31493C" />
         </svg>
       </div>
     </section>
-  <section class="blogs">
+  <section id="blogs" class="blogs">
     <h2 id="blogs-intro-title">Explore Our Blogs</h2>
     <div class="blogs-cards">
       <?php
@@ -303,13 +303,13 @@
       Explore All Blogs
     </a>
   </section>
-    <section class="newsletter">
+    <section id="newsletter" class="newsletter">
       <div class="newsletter-container">
         <h3 id="newsletter-title">Subscribe To Our Newsletter</h3>
         <?php echo do_shortcode( '[newsletter_form form="1"]' ); ?>
       </div>
     </section>
-    <section class="contact-us">
+    <section id="contact-us" class="contact-us">
       <h2 id="contact-us-title">Have Any Questions ?</h2>
       <div class="contact-us-container">
         <div class="contact-channels-container">
