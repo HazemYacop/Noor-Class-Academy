@@ -13,6 +13,12 @@ $( document ).ready( function() {
     $( 'body' ).toggleClass( 'menu-open' );
   } );
 
+  $( '.close-nav' ).on( 'click', function() {
+    $( '.nav-items' ).removeClass( 'open' );
+    $( '.hamburger' ).removeClass( 'active' );
+    $( 'body' ).removeClass( 'menu-open' );
+  } );
+
   $( '.nav-items a, #nav-free-trial' ).on( 'click', function() {
     if ( $( '.nav-items' ).hasClass( 'open' ) ) {
       $( '.nav-items' ).removeClass( 'open' );
