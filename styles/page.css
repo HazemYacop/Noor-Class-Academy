@@ -40,7 +40,7 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: .2rem solid #31493c;
+  border-bottom: 0.2rem solid #31493c;
 }
 
 .nav-bar {
@@ -114,7 +114,7 @@ body.menu-open {
 }
 
 .page-content {
-    padding: 10rem 0;
+  padding: 10rem 0;
 }
 
 .hero-text {
@@ -239,18 +239,26 @@ footer {
 
 @media (max-width: 1024px) {
   .hero-content {
-    padding: 0 2rem;
+    padding-bottom: 7rem;
   }
   .plans-container {
     flex-wrap: wrap;
     justify-content: center;
   }
+  #thumbnail-img {
+    width: 100%;
+    max-height: 25vh;
+  }
+  #hero-description {
+    width: 100%;
+  }
+  .hero-text {
+    width: 90%;
+  }
 }
 
 @media (max-width: 768px) {
   .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1.5rem 2rem;
   }
 
@@ -285,9 +293,24 @@ footer {
     pointer-events: auto;
   }
 
+  .post {
+    flex-direction: column;
+  }
+
+  .post-content {
+    padding: 2rem 1rem;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 0.2rem solid #000;
+    margin-top: 2rem;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
+    padding: 0 1rem 5rem;
     gap: 2rem;
   }
 
@@ -371,17 +394,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-  #hero-title {
-    font-size: 2.2rem;
+  #thumbnail-img {
+    max-height: 30vh;
   }
-  #hero-description {
-    font-size: 1rem;
-  }
-  #about-us-title {
-    font-size: 2.2rem;
-  }
-  #wcu-title,
-  #hdiw-title {
-    font-size: 2.4rem;
+  .text-field {
+    min-width: 0;
+    width: 90%;
   }
 }
