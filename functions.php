@@ -60,7 +60,7 @@ function noor_class_default_menu() {
     echo '<ul class="nav-items">';
     echo '<li class="nav-item"><a href="' . esc_url( home_url( '/#about-us' ) ) . '">About Us</a></li>';
     echo '<li class="nav-item"><a href="' . esc_url( home_url( '/#contact-us' ) ) . '">Contact Us</a></li>';
-    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/#pricings' ) ) . '">Pricings</a></li>';
+    echo '<li class="nav-item"><a href="' . esc_url( home_url( '/#most-popular-plan' ) ) . '">Pricings</a></li>';
     echo '<li class="nav-item"><a href="' . esc_url( home_url( '/all-posts' ) ) . '">Blogs</a></li>';
     echo '</ul>';
 }
@@ -69,7 +69,7 @@ function noor_class_footer_menu_fallback() {
     echo '<ul class="footer-items">';
     echo '<li class="footer-item"><a href="' . esc_url( home_url( '/#about-us' ) ) . '">About Us</a></li>';
     echo '<li class="footer-item"><a href="' . esc_url( home_url( '/#contact-us' ) ) . '">Contact Us</a></li>';
-    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/#pricings' ) ) . '">Pricings</a></li>';
+    echo '<li class="footer-item"><a href="' . esc_url( home_url( '/#most-popular-plan' ) ) . '">Pricings</a></li>';
     echo '<li class="footer-item"><a href="' . esc_url( home_url( '/all-posts' ) ) . '">Blogs</a></li>';
     echo '</ul>';
 }

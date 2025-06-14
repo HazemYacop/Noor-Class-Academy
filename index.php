@@ -19,7 +19,7 @@
                   class="btn-icon"
                 /></button
             ></a>
-            <a href="<?php echo esc_url( home_url( '/#pricings' ) ); ?>"><button class="ter-btn">See Our Pricings</button></a>
+            <a href="<?php echo esc_url( home_url( '/#most-popular-plan' ) ); ?>"><button class="ter-btn">See Our Pricings</button></a>
           </div>
         </div>
         <img
