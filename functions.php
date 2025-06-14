@@ -177,3 +177,56 @@ function noor_handle_contact_form() {
 }
 add_action( 'admin_post_nopriv_noor_contact_form', 'noor_handle_contact_form' );
 add_action( 'admin_post_noor_contact_form', 'noor_handle_contact_form' );
+
+/**
+ * Output basic SEO meta tags.
+ */
+function noor_class_seo_meta_tags() {
+    if ( is_singular() ) {
+        global $post;
+        $title       = single_post_title( '', false );
+        $description = has_excerpt( $post ) ? strip_tags( get_the_excerpt( $post ) ) : '';
+        $image       = get_the_post_thumbnail_url( $post, 'full' );
+        $url         = get_permalink( $post );
+    } else {
+        $title       = get_bloginfo( 'name' );
+        $description = get_bloginfo( 'description' );
+        $image       = get_template_directory_uri() . '/assets/logo.png';
+        $url         = home_url();
+    }
+
+    if ( $description ) {
+        echo '<meta name="description" content="' . esc_attr( wp_strip_all_tags( $description ) ) . '" />' . PHP_EOL;
+    }
+    echo '<link rel="canonical" href="' . esc_url( $url ) . '" />' . PHP_EOL;
+    echo '<meta property="og:title" content="' . esc_attr( $title ) . '" />' . PHP_EOL;
+    if ( $description ) {
+        echo '<meta property="og:description" content="' . esc_attr( wp_strip_all_tags( $description ) ) . '" />' . PHP_EOL;
+    }
+    echo '<meta property="og:url" content="' . esc_url( $url ) . '" />' . PHP_EOL;
+    if ( $image ) {
+        echo '<meta property="og:image" content="' . esc_url( $image ) . '" />' . PHP_EOL;
+    }
+    echo '<meta name="twitter:card" content="summary_large_image" />' . PHP_EOL;
+}
+add_action( 'wp_head', 'noor_class_seo_meta_tags', 1 );
+
+/**
+ * Output minimal structured data for the organization.
+ */
+function noor_class_structured_data() {
+    $data = array(
+        '@context' => 'https://schema.org',
+        '@type'    => 'Organization',
+        'url'      => home_url(),
+        'name'     => get_bloginfo( 'name' ),
+        'logo'     => get_template_directory_uri() . '/assets/logo.png',
+    );
+
+    if ( get_bloginfo( 'description' ) ) {
+        $data['description'] = get_bloginfo( 'description' );
+    }
+
+    echo '<script type="application/ld+json">' . wp_json_encode( $data ) . '</script>' . PHP_EOL;
+}
+add_action( 'wp_head', 'noor_class_structured_data', 5 );
