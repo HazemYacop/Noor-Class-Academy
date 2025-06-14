@@ -714,18 +714,7 @@ input:focus {
   transform: translateY(-0.2rem);
 }
 
-#contact-us-form > p {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 1rem;
-  width: 45vw;
-}
 
-#contact-message {
-  min-height: 15rem;
-}
 
 .wpcf7-response-output {
   margin: 0 !important;
@@ -1144,10 +1133,6 @@ footer {
     width: 80%;
   }
 
-  #contact-us-form > p,
-  #contact-us-form {
-    width: 100%;
-  }
 
   footer .footer-container {
     flex-direction: column;
@@ -1363,10 +1348,6 @@ footer {
     width: 80%;
   }
 
-  #contact-us-form > p,
-  #contact-us-form {
-    width: 100%;
-  }
 
   footer .footer-container {
     flex-direction: column;
@@ -1433,13 +1414,5 @@ footer {
   }
   .contact-channels-container {
     width: 100%;
-  }
-  #contact-us-form {
-    display: flex;
-    justify-content: center;
-  }
-  #contact-us-form > p {
-    width: 90%;
-    align-items: center;
   }
 }
