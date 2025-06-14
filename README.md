@@ -9,3 +9,11 @@ This theme was converted from a static website. To enable the newsletter form di
 
 The theme also registers a sidebar ("Primary Sidebar") that appears on archive and single post pages. Add widgets to it under **Appearance → Widgets**.
 Two custom widgets are included for displaying trending posts (ordered by comment count) and latest posts. After activating the theme you will see **Trending Posts** and **Latest Posts** in the widget list. Drag them to the sidebar to show links styled like the static design.
+
+## SEO Enhancements
+
+The theme automatically outputs standard SEO meta tags and structured data. Meta
+descriptions are generated from post excerpts or the site tagline and Open Graph
+tags are included for better social sharing. A basic Organization schema is also
+inserted. These features work out of the box, no additional plugins are
+required.
