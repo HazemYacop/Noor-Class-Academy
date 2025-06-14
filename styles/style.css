@@ -9,6 +9,10 @@ body {
   background-color: #e1f4cb;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -865,16 +869,22 @@ footer {
   }
 
   .nav-items {
-    display: none;
+    position: fixed;
+    inset: 0;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #e1f4cb;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(225, 244, 203, 0.7);
+    backdrop-filter: blur(6px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    gap: 1.5rem;
+  }
+
+  .nav-items.open {
+    transform: translateX(0);
+    pointer-events: auto;
   }
 
 
