@@ -22,6 +22,7 @@
         <span></span>
       </button>
       <div class="nav-items">
+        <button class="close-nav" aria-label="Close navigation">&times;</button>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'primary',
