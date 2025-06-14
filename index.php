@@ -372,5 +372,4 @@
       <span class="star"></span>
       <span class="star"></span>
     </section>
-    
 <?php get_footer(); ?>
