@@ -13,4 +13,22 @@ $( document ).ready( function() {
     } );
     $( this ).toggleClass( 'active' );
   } );
+
+  // Smooth scroll for internal anchor links
+  $( 'a[href*="#"]' ).on( 'click', function( e ) {
+    const targetHash = this.hash;
+    const target     = $( targetHash );
+    if ( target.length ) {
+      e.preventDefault();
+      $( 'html, body' ).animate( {
+        scrollTop: target.offset().top
+      }, 500 );
+
+      // Close mobile navigation after selecting a link
+      if ( $( '.hamburger' ).is( ':visible' ) ) {
+        $( '.nav-items' ).slideUp( 200 );
+        $( '.hamburger' ).removeClass( 'active' );
+      }
+    }
+  } );
 } );
