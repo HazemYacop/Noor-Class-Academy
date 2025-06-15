@@ -45,4 +45,32 @@ $( document ).ready( function() {
       }
     }
   } );
+
+  // Ensure newsletter forms do not submit to a localhost URL after deployment
+  function fixNewsletterForms( root ) {
+    $( root ).find( 'form[action*="localhost"]' ).attr( 'action', function( _, action ) {
+      return action.replace( /https?:\/\/localhost/gi, window.location.origin );
+    } );
+  }
+
+  // Fix actions on initial load
+  fixNewsletterForms( document );
+
+  // Watch for dynamically inserted forms
+  const observer = new MutationObserver( function( mutations ) {
+    mutations.forEach( function( mutation ) {
+      mutation.addedNodes.forEach( function( node ) {
+        if ( node.nodeType === 1 ) {
+          fixNewsletterForms( node );
+        }
+      } );
+    } );
+  } );
+  observer.observe( document.body, { childList: true, subtree: true } );
+
+  // As a safety net, adjust the action right before submission
+  $( document ).on( 'submit', 'form[action*="localhost"]', function() {
+    var action = $( this ).attr( 'action' );
+    $( this ).attr( 'action', action.replace( /https?:\/\/localhost/gi, window.location.origin ) );
+  } );
 } );
