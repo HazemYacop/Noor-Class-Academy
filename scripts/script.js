@@ -45,4 +45,10 @@ $( document ).ready( function() {
       }
     }
   } );
+
+  // Ensure newsletter forms do not submit to a localhost URL after deployment
+  $( 'form[action*="localhost"]' ).each( function() {
+    var action = $( this ).attr( 'action' );
+    $( this ).attr( 'action', action.replace( /localhost/i, window.location.hostname ) );
+  } );
 } );
