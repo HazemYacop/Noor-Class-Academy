@@ -1383,43 +1383,194 @@ footer {
 
 @media (max-width: 480px) {
   #logo {
-    width: 13rem;
+    width: 10rem;
+  }
+  .hamburger {
+    gap: 0.4rem;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3.6px;
+  }
+  .hero {
+    gap: 4.5rem;
   }
   .hero-content {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   #hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   #hero-description {
-    font-size: 1.4rem;
+    font-size: 1rem;
     width: 100%;
   }
   .pri-btn,
   .sec-btn {
-    gap: 1.5rem;
-    padding: 1.2rem 2rem;
-    font-size: 1.5rem;
+    gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .ter-btn {
+    font-size: 1.2rem;
   }
   .cta-btns {
     gap: 1.6rem;
   }
+  .about-us-text {
+    gap: 3rem;
+  }
+
+  #about-us-description {
+    font-size: 1.1rem;
+  }
   #wcu-title,
   #hdiw-title,
-  #contact-us-title {
-    padding: 0 1.5rem;
+  #blogs-intro-title,
+  #newsletter-title,
+  #contact-us-title,
+  #about-us-title {
+    padding: 0 1rem;
+    font-size: 2rem;
     text-align: center;
   }
-  .wcu-subtitle {
-    font-size: 2rem;
+
+  .wcu-points {
+    gap: 2rem;
   }
-  .wcu-point-description {
+
+  .wcu-subtitle {
     font-size: 1.2rem;
   }
-  .hdiw-step-description {
-    font-size: 1.4rem;
+  .wcu-point-description,
+  #hdiw-description {
+    font-size: 0.9rem;
   }
+  .wcu-point {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .wcu-icon-container {
+    padding: 0.9rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 1rem;
+  }
+
+  .wcu-icon {
+    width: 0.4rem;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+  }
+
+  .hdiw-steps {
+    gap: 1.5rem;
+  }
+
+  .hdiw-step {
+    width: 55%;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    height: 20rem;
+  }
+
+  .hdiw-step-title {
+    font-size: 1.5rem;
+  }
+
+  .hdiw-step-description {
+    font-size: 0.8rem;
+  }
+
+  .plans-container {
+    width: 70%;
+  }
+
+  .plan,
+  #most-popular-plan {
+    min-height: 15rem;
+    padding: 2rem;
+  }
+
+  .plan-title,
+  .plan-price,
+  #mp-title {
+    font-size: 1.6rem;
+  }
+
+  .plan-benefits {
+    gap: 1rem;
+  }
+
+  .benefit {
+    font-size: 1rem;
+  }
+
+  .pri-link {
+    font-size: 1.1rem;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-description {
+    font-size: 0.7rem;
+  }
+
+  .newsletter-container {
+    padding: 2rem 3rem;
+    gap: 4rem;
+  }
+
+  .newsletter-form {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .text-field {
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    width: 85%;
+  }
+
+  #contact-us-form {
+    width: 85vw;
+  }
+
+  #contact-us-context {
+    font-size: 0.9rem;
+    width: 85%;
+  }
+
   .contact-channels-container {
     width: 100%;
+    gap: 2rem;
+  }
+
+  .footer-container {
+    width: 80%;
+  }
+
+  #footer-logo {
+    font-size: 1.8rem;
+  }
+
+  .footer-column {
+    gap: 1rem;
+  }
+
+  .footer-column-title {
+    font-size: 1.3rem;
+  }
+
+  .footer-items {
+    gap: 0.7rem;
+  }
+
+  .footer-item a {
+    font-size: 0.8rem;
   }
 }
