@@ -49,7 +49,7 @@
             engaging, and meaningful for students worldwide.
           </p>
           <div class="cta-btns">
-            <a href="<?php echo esc_url( home_url( '/#about-us' ) ); ?>"><button class="sec-btn">Meet Our Teachers</button></a>
+            <a href="<?php echo esc_url( home_url( '/meet-our-teachers' ) ); ?>"><button class="sec-btn">Meet Our Teachers</button></a>
             <a href="<?php echo esc_url( home_url( '/#contact-us' ) ); ?>"><button class="ter-btn reverse">Contact Us</button></a>
           </div>
         </div>
